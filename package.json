@@ -13,6 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
+    "prepare": "husky install",
     "docker:list": "docker images",
     "docker:dev": "docker-compose up --build --force-recreate",
     "docker:build": "docker build -t staff-image ./",
