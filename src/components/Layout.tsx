@@ -1,21 +1,9 @@
-
 type Props = {
-    children: JSX.Element
-}
+  children: JSX.Element;
+};
 
 const Layout = ({ children }: Props) => {
-    const LoggedIn = {
-        user: {
-            name: 'Jane Doe',
-        },
-    };
-
-
-    return (
-        <>
-            {children}
-        </>
-    )
-}
+  return <>{children}</>;
+};
 
 export default Layout;
