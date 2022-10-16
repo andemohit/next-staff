@@ -15,7 +15,10 @@ const Home: NextPageWithLayout = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Catcard {...mockCatcardProps.base} />
+      <section className="bg-gradient-to-t from-cyan-500 to-blue-500">
+        <h1>Welcom to next staff</h1>
+        <Catcard {...mockCatcardProps.base} />
+      </section>
     </div>
   );
 };
