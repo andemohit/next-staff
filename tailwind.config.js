@@ -1,16 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}', './public/**/*.html'],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './public/**/*.html',
+    './node_modules/flowbite-react/**/*.js',
+    './node_modules/flowbite/**/*.js',
+  ],
+  darkMode: 'media',
   theme: {
+    // Ensure these match with .storybook/preview.js
+    screens: {
+      xs: '375px',
+      sm: '600px',
+      md: '900px',
+      lg: '1200px',
+      xl: '1536px',
+    },
+    fontFamily: {
+      sans: ['Arial', 'sans-serif'],
+      serif: ['Garamond', 'serif'],
+    },
     extend: {
-      screens: {
-        xs: '375px',
-        sm: '600px',
-        md: '900px',
-        lg: '1200px',
-        xl: '1536px',
+      colors: {
+        blue: {
+          500: '#1a73e8',
+        },
+      },
+      spacing: {
+        128: '32rem',
       },
     },
   },
-  plugins: [],
+  plugins: [require('flowbite/plugin')],
 };
